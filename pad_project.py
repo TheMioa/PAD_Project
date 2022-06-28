@@ -41,7 +41,7 @@ app.layout = html.Div([
 
     html.Br(),
     html.H2(children='Analiza eksploracyjna'),
-    html.H3(['Wizualizacja korelacji danych']),
+    html.H3(['Wykres punktowy dla dwóch wybranych atrybutów']),
     html.Label('Wybór X'),
     dcc.Dropdown(options=options, value = ' div_count', id='x_choice'),
     html.Label('Wybór Y'),
@@ -123,7 +123,7 @@ def update_figure(x_choice, y_choice, violin_choice, model_choice):
         confusion_matrix = confusion_matrix.astype(int)
 
         layout = {
-            "title": "Macierz pomyłek", 
+            "title": "Macierz pomyłek dla k = 7", 
             "xaxis": {"title": "Wartość przewidziana"}, 
             "yaxis": {"title": "Wartość prawdziwa"}
         }
